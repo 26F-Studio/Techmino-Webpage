@@ -1,0 +1,250 @@
+[
+  {
+    "name": "I can't insert",
+    "repeatCount": 4,
+    "interval": 100,
+    "begin": [
+    ],
+    "loop": [
+      "Techmino Field:eJwTE4MCRjGSWIxcYoxQgMRiRGIBAB11BNg=",
+      "Techmino Field:eJwTE4MCRjGSWIyMQAQEXEAgxggAvi4ExA==",
+      "Techmino Field:eJwTE4MCRjGSWIxcYoxQgMRiRGIBAB11BNg=",
+      "Techmino Field:eJwTE4MCRjGSWIyMQAQFMBYXEAAA7F0Ezg=="
+    ],
+    "end": [
+      "Techmino Field:eJwTE4MCRjGSWIxcYoxQgMRiRGIBAB11BNg=",
+      "Techmino Field:eJwTE4MCRjGSWIyMQAQEXEAgxggAvi4ExA==",
+      "Techmino Field:eJwTE4MCRjGSWIxcYoxQgMRiRGIBAB11BNg=",
+      "Techmino Field:eJwTE4MCRjGSWIyMQAQFMBYXEAAA7F0Ezg==",
+      "Techmino Field:eJwTE4MCRjGSWIyMQAQFMBYXEAAA7F0Ezg==",
+      "Techmino Field:eJwTE4MCRjGSWIyMQAQFMJYoEAAA7MsE+g==",
+      "Techmino Field:eJwTE4MCRjGSWIyMQAQFMJYoEAAA7MsE+g==",
+      "Techmino Field:eJwTE4MCRjGSWIyMQAQFMJYoEAAA7MsE+g==",
+      "Techmino Field:eJwTE4MCRjGSWIyMQAQFMJYoEAAA7MsE+g=="
+    ]
+  },
+  {
+    "name": "S-spin sucks",
+    "repeatCount": 3,
+    "interval": 100,
+    "begin": [
+      "Techmino Field:eJwTEwMBRkYxGAAyGekDODjQmADUaAH5",
+      "Techmino Field:eJwTEwMBRkYxGAAyGekFODhQmADUMAH5",
+      "Techmino Field:eJwTEwMBRkYxGAAyGekHODiQmADT+AH5",
+      "Techmino Field:eJwTEwMBRkYxGAAyGWkEOOAMDiQhAMIdAe8=",
+      "Techmino Field:eJwTEwMBRkYxGAAyGakAOOAMDiQhAJ5fAds=",
+      "Techmino Field:eJwTEwMBRkYxGAAyGUkEHHAGB5IQAHwxAcc=",
+      "Techmino Field:eJwTEwMBRkYxGAAyGfEADjiDA0kIAFuTAbM=",
+      "Techmino Field:eJwTEwMBRkYxGGDkAPLAgIODEcZiZAQALZQBlQ==",
+      "Techmino Field:eJwTEwMBRkYxGOBgBPJAgIODEQpADAAtsAGV"
+    ],
+    "loop": [
+      "Techmino Field:eJwTEwMBRkYxGAAyGUGAg4MRBkBMAC0yAZU=",
+      "Techmino Field:eJwTEwMBRkYxGAAyGcGAgxEKOBAsEAEAPL0Bnw==",
+      "Techmino Field:eJwTEwMBRkYxGAAyGSGAgxHGQLCAGAA8oQGf",
+      "Techmino Field:eJwTEwMBRkYxGAAyGdEBBwcSEwA76wGf",
+      "Techmino Field:eJwTEwMBRkYxGODgAPIggIMDAB5tAYs=",
+      "Techmino Field:eJwTEwMBRkYxGGDkAPLAgIODEcZiZAQALZQBlQ==",
+      "Techmino Field:eJwTEwMBRkYxGOBgBPJAgIODEQpADAAtsAGV",
+      "Techmino Field:eJwTEwMBRkYxGODgAPIggIMDAB5tAYs=",
+      "Techmino Field:eJwTEwMBRkYxGAAyGWGAA85AsBgBPGkBnw==",
+      "Techmino Field:eJwTEwMBRkYxGAAyGaGAA87gQBICADyFAZ8=",
+      "Techmino Field:eJwTEwMBRkYxGAAyGSGAgxHGQLCAGAA8oQGf"
+    ],
+    "end": [
+      "Techmino Field:eJwTEwMBRkYxGOBgBPJAgIODEQpADAAtsAGV",
+      "Techmino Field:eJwTEwMBRkYxGOBgBPJAgIODEQpADAAtsAGV",
+      "Techmino Field:eJwTEwMBRkYxGBBlBPJAQFSUEQpADAAwbgHJ",
+      "Techmino Field:eJwTEwMBRkYxGBBlBPJAQFSUEQpADAAwbgHJ",
+      "Techmino Field:eJwTEwMBRkYxGBBlBPJAQFSUEQpADAAwbgHJ",
+      "Techmino Field:eJwTEwMBRkYxGBBlBPJAQFSUEQpADAAwbgHJ"
+    ]
+  },
+  {
+    "name": "Too early spin",
+    "repeatCount": 0,
+    "interval": 100,
+    "begin": [
+      "Techmino Field:eJwTEwMDRjEoYGREYoJ4AwX4+fnhTDAJAHC6Ats=",
+      "Techmino Field:eJwTEwMDRjEoYGREYoJ4Awf4+fnhTCAGAHBKAts=",
+      "Techmino Field:eJwTEwMDRjEoYGREYoJ4Awn4+fnhTEYAb9oC2w==",
+      "Techmino Field:eJwTEwMDRjEoYGREYoJ4dAP8cAY/khgAVkMC0Q==",
+      "Techmino Field:eJwTEwMDRjEoYGREYoJ4NAH8cAY/khgAIw0CvQ==",
+      "Techmino Field:eJwTEwMDRjEoYGREYoJ4FAN+OIMfSQwA8VgCqQ==",
+      "Techmino Field:eJwTEwMDRjEoYGREYoJ4JAF+OIMfSQwAwUIClQ==",
+      "Techmino Field:eJwTEwMDRjEoYGREYoJ4OAE/nMGPJAYAkrwCgQ==",
+      "Techmino Field:eJwTEwMDRjEoYGREYoJ4YMAPZ8BZQDEAZcYCbQ=="
+    ],
+    "loop": [],
+    "end": [
+      "Techmino Field:eJwTEwMDRjEoYGREMPlBPBDg5+cHADiuAlk=",
+      "Techmino Field:eJwTEwMDRjEoYGREMPlBPBDg5+cHADiuAlk=",
+      "Techmino Field:eJwTEwMDRjEoYGREMEVBPBAQFRUFADkaAnE=",
+      "Techmino Field:eJwTEwMDRjEoYGREMEVBPBAQFRUFADkaAnE=",
+      "Techmino Field:eJwTEwMDRjEoYGREMEVBPBAQFRUFADkaAnE=",
+      "Techmino Field:eJwTEwMDRjEoYGREMEVBPBAQFRUFADkaAnE=",
+      "Techmino Field:eJwTEwMDRjEoYGREMEVBPBAQFRUFADkaAnE="
+    ]
+  },
+  {
+    "name": "Wrong special skill",
+    "repeatCount": 4,
+    "interval": 100,
+    "begin": [
+      "Techmino Field:eJwTE0MARjiDkRHOQgjRBbCyorIAvXwDew==",
+      "Techmino Field:eJwTE0MARjiDkRHOQgjRAbCyorMAvZwDew==",
+      "Techmino Field:eJwTE0MARjiDkRHOQgjRHLCyYrIAvbwDew==",
+      "Techmino Field:eJwTE0MARjiDkRHOQgjRCrCyYrAAm6sDcQ==",
+      "Techmino Field:eJwTE0MARjiDkRHOQghRA7CyYrAAWNUDXQ==",
+      "Techmino Field:eJwTE0MARjiDkRHOQgiRClhZMVgAF48DSQ==",
+      "Techmino Field:eJwTE0MARjiDkRHOQgjhA6ysGCwA18oDNQ==",
+      "Techmino Field:eJwTE0MARjiDkRHOQgjBACsrBgsAmaQDIQ==",
+      "Techmino Field:eJwTE0MARjiDEcZkZYUJsbIyQgAAXQ4DDQ=="
+    ],
+    "loop": [
+      "Techmino Field:eJwTE0MARhiDlZURzoIyAD9ZAwM="
+    ],
+    "end": [
+      "Techmino Field:eJwTE0MARhiDlZUVxoKJAQA/fQMD",
+      "Techmino Field:eJwTE0MARhiDlZUVxoKJAQA/fQMD",
+      "Techmino Field:eJwTE0MARhiDlZUVxoKJAQA/fQMD",
+      "Techmino Field:eJwTE0MARhhDVFQUxoKJAQBDbQND",
+      "Techmino Field:eJwTE0MARhhDFMYCACXpAmo=",
+      "Techmino Field:eJwTE0MARhhDFMYCACXpAmo=",
+      "Techmino Field:eJwTE0MARhhDFMYCACXpAmo=",
+      "Techmino Field:eJwTE0MARhhDFMYCACXpAmo="
+    ]
+  },
+  {
+    "name": "Bore premature",
+    "repeatCount": 0,
+    "interval": 100,
+    "begin": [
+      "Techmino Field:eJwTE2MUgwE4i5GREc7CkIVIMkIlGRlhJFUAPz8/nAkmAVokBR0=",
+      "Techmino Field:eJwTE2MUgwE4i5GREc7CkIVIMkIlGRlhJPmAH8HiRxcDAFsSBR0=",
+      "Techmino Field:eJwTE2MUgwE4i5GREc7CkIVIMkIlGRlhJLmAH8HixxQDAFuCBR0=",
+      "Techmino Field:eJwTE2MUgwE4i5GREc7CkIVIMkIlGRlhJDGAH8HixxQDAPpNBQk=",
+      "Techmino Field:eJwTE2MUgwE4i5GREc7CkIVIMkIlGRlhJDrgR7D4McUAmrcE9Q==",
+      "Techmino Field:eJwTE2MUgwE4i5GREc7CkIVIMkIlGcFcfkYY4IczEWIAPLEE4Q==",
+      "Techmino Field:eJwTE2MUgwE4i5GREc7CkOUHi4EwPz9YKSNYDAoA4CwEzQ==",
+      "Techmino Field:eJwTE2MUgwE4i5GREc7CkOXn54fyGPnBSoFMALHRBMM=",
+      "Techmino Field:eJwTE2MUgwE4i5EfxuTnh8vCWIyMjFC1IAYjmAsAtpMEww=="
+    ],
+    "loop": [],
+    "end": [
+      "Techmino Field:eJwTE2MUgwFROEMUJsgIF4OrY2RkhPJADEYwFwC9SQTb",
+      "Techmino Field:eJwTE2MUgwJRURiTURQmBpdlZGSE8kAMRjAXAIYBBAA=",
+      "Techmino Field:eJwTE2MUgwJRURiTURQmBpdlZGSE8kAMRjAXAIYBBAA=",
+      "Techmino Field:eJwTE2MUgwJRURiTURQmBpdlZGSE8kAMRjAXAIYBBAA=",
+      "Techmino Field:eJwTE2MUgwJRURiTURQmBpdlZGSE8kAMRjAXAIYBBAA="
+    ]
+  },
+  {
+    "name": "Over spin",
+    "repeatCount": 4,
+    "interval": 100,
+    "begin": [
+      "Techmino Field:eJwTEwMDRjEYgLMYGZGYqLKMMGlGOEktwMqKygIAXWwE9Q==",
+      "Techmino Field:eJwTEwMDRjEYgLMYGZGYqLKMMGlGOEk9wMqKzAIAXUwE9Q==",
+      "Techmino Field:eJwTEwMDRjEYgLMYGZGYqLKMMGlGOElNwMqKYAEAXSwE9Q==",
+      "Techmino Field:eJwTEwMDRjEYgLMYGZGYqLKMMGlGOEkuYGVFsAD79wTh",
+      "Techmino Field:eJwTEwMDRjEYgLMYGZGYqLKMMGlGOEkMYGVFsACcYQTN",
+      "Techmino Field:eJwTEwMDRjEYgLMYGZGYqLKMMGlGOIkOWFkRLAA+WwS5",
+      "Techmino Field:eJwTEwMDRjEYgLMYGZGYqLKMMGlGMMnKyggFrKwA4dYEpQ=="
+    ],
+    "loop": [
+      "Techmino Field:eJwTEwMDRjEYgLMYGZGYqLIgkpGVFawGyGZlBQC0MQSb"
+    ],
+    "end": [
+      "Techmino Field:eJwTEwMDRjEYgLMYGZGYqLIgkpWVFawGyGZlBAC0YQSb",
+      "Techmino Field:eJwTEwMDRjEYgLMYWeFMVlY4C66GkZERTIBJALXVBJs=",
+      "Techmino Field:eJwTEwMDRjEYYIUzWOFMRrg0I5xkBAkyQkkAtqEEmw==",
+      "Techmino Field:eJwTEwMDRjEYYIUzWOGCCBYjnGRkZAQTYBIAtn0Emw==",
+      "Techmino Field:eJwTEwMDRjEYEIUzROGCCBYjnGRkZAQTYBIAwU0E2w==",
+      "Techmino Field:eJwTEwMDRjEoEBVFMOEsRjjJyMgIJsAkAIoABAA=",
+      "Techmino Field:eJwTEwMDRjEoEBVFMOEsRjjJyMgIJsAkAIoABAA=",
+      "Techmino Field:eJwTEwMDRjEoEBVFMOEsRjjJyMgIJsAkAIoABAA=",
+      "Techmino Field:eJwTEwMDRjEoEBVFMOEsRjjJyMgIJsAkAIoABAA="
+    ]
+  },
+  {
+    "name": "Critical miss drop",
+    "repeatCount": 2,
+    "interval": 100,
+    "begin": [
+      "Techmino Field:eJxNy0EKADEIBEEcFCQMePP/T13XRJK+WApmVpLTVS+qKqsCzFQqwM34a7mTRzGKoNm56ZaXtH89RgtBHIHAiFfcv+jZlLdn3fwA1DYFUA==",
+      "Techmino Field:eJxNy0EKADEIBEEcFCQMeMv/n7quiZi+WAruncnuRrWoqqwMMFPJADfjr+VOXkUrgmb3pkee0vr1aC0EcQUCLY54flGzKNOzND/UbgVQ",
+      "Techmino Field:eJxFy9EKQEEERdGcKOmUt/n/T72uodkvFuWcSs721IuqSlSAmUoFuBl/hTs5ylUmzeamV17S/vVcBZIYgcCKT7y/6NkUl+fVQj7VJAVQ",
+      "Techmino Field:eJxFy0EKADEIQ1EMCqEE3PX+Rx2nVfpXTyF7V7anp3O4u60KiHCrAEbo1yKlVo4yFdE/v2LJz5Y5WkihBQEjPeluIZpdslUe2AehSQVG",
+      "Techmino Field:eJxFy0EKADEIQ1EMCqEE3PX+Rx2nVfpXTyF7V7anp3O4u60KiHCrAEbo1yKlVo4yFdE/v2LJz5Y5WkihBQEjPeluIZpdslUe2AehSQVG",
+      "Techmino Field:eJxFzNEKQEEERdGcKE2nvPn/T72uodlPiyKzktyeelBVORVgplIBbsZfx50cxSqCZrPTKy9p33qsDoIYgcCKT7y3oItc+qgsMo+61gfW2wVc",
+      "Techmino Field:eJxFy0EKADEIQ1ESFKQE3PX+Rx2nVfpXTyF7V9jT0znMDKsi3Q0VGe76tSKkVo4y5d4/u4qSnW3kaDHFFkWO9KS7pQK4jDC0MYKNPtb5BVw=",
+      "Techmino Field:eJxFy0EKADEIQ1EaFEIJuPP+Rx2nVfpXT9HMauX0dAYzW7sC3G1VAN31a5NSK0YRcu+dXbFk55cx2gihBQEjPen+Qjx3RbbKNvoAogYFUg==",
+      "Techmino Field:eJxFy0EKADEIQ1EaFEIJuPP+Rx2nVfpXT9HMauX0dAYzW7sC3G1VAN31a5NSK0YRcu+dXbFk55cx2gihBQEjPen+Qjx3RbbKNvoAogYFUg==",
+      "Techmino Field:eJxFztEKQCEIA1AaChID3/r/T727prQXT9Gkc5R1Jk91MLO1FcDdlgKEO3/tCLKVo0y6951dhWTVjRxtJNECgRGfeLtg1DsxWrK23FL9qMYH150FYA==",
+      "Techmino Field:eJxFzEEKADEIA0AaFEIJeOv/n7quVZrTKMZzMutMnmows7UzgLutDEB3/dqk1IpRhNx7Z1dMWXUZo40QWhAw0pNuF2LdJdlK15dbG3zXlQVg",
+      "Techmino Field:eJxFzkEKADEIQ1EMCqEE3PX+Rx2nVfpXr6LQvSvb09N5uLutCohwqwBG6NcipVaOMhXRM79iyc8tc7SQQgsCRnrSvYV49oq8qhV6/8Um2AfXowVg",
+      "Techmino Field:eJxFzsEKQCEIRFEcFIYYcNf/f+rzZdJdnQLLvSvb09M5uLutCohwqwBG6NcipascZSri3nmLJT+zzNFCClcQMNKTehZi/8vqbmDsVwz2AaI4BVY=",
+      "Techmino Field:eJxFzsEKQCEIRFEcFIYYcNf/f+rzZdJdnQLLvSvb09M5uLutCohwqwBG6NcipascZSri3nmLJT+zzNFCClcQMNKTehZi/8vqbmDsVwz2AaI4BVY=",
+      "Techmino Field:eJxFzkEKADEIA0AMCqEEvPX/T13XVprTKFW7d8X25KkLd7dVASLcKgAj9GuR0lWOMhVxe37Ekvcsc7SQwhUEjPSkMwvx3GXl/sDo3ov6tVm3P9hqBWw=",
+      "Techmino Field:eJxFjkEKADEIAzEohBLw1v8/dW2r7JxGMerehe3ht1u4u60CiHArAEbo2CKlthzLVET3/BnL/GaZYwsptEHAmH7Ty0J8d1n0B8azpVbd6UOVH9hSBWw=",
+      "Techmino Field:eJxFzUsKADEIA1AMCqEE3PX+Rx3HVhpcvBY/e1dsT5764e62KkCEWwVghH4tUrrKUaYi7p8fseQ9yxwtpHAFASM96cxCPHdZKblXN/8tVd3dMvsA2JoFbA==",
+      "Techmino Field:eJxFzkEKACEMQ1EaWggS6M77H3XiqPhXT6HVOV3M29N/yMwYDqjKcACrtDRI6aivulV17nKLVv6z7KuBFo4g4EpP2rMQ97t0VvoHwbXFqxAfookFYg=="
+    ],
+    "loop": [
+      "Techmino Field:eJxFzUsKADEIA1AMCqEE3PX+Rx1rK5PVU/zsXbE9+dWFu9uqABFuFYAROlqk9JSjTEW8nl+x5L3LHC2k8AQBI/3S3YV4/7Jy5DXNvuLW04VTfdhYBWw=",
+      "Techmino Field:eJxFjkEKADEIAzEohBLw1v8/dW2r7JxGMerehe3ht1u4u60CiHArAEbo2CKlthzLVET3/BnL/GaZYwsptEHAmH7Ty0J8d1n0B8azpVbd6UOVH9hSBWw=",
+      "Techmino Field:eJxFzUsKADEIA1AMCqEE3PX+Rx3HVhpcvBY/e1dsT5764e62KkCEWwVghH4tUrrKUaYi7p8fseQ9yxwtpHAFASM96cxCPHdZKblXN/8tVd3dMvsA2JoFbA==",
+      "Techmino Field:eJxFjksKQDEIAzEohBJw1/sf9dlWebMag7+9C9vDb7dwd1sFEOFWAIzQsUVKbTmWqYjO/BnL/M4yxxZSaIOAMf2mNwvx3WXRHxhry9l0u4uTf9heBWw=",
+      "Techmino Field:eJxFjkEKADEIAzEohBLw1v8/dW2r7JxGMerehe3ht1u4u60CiHArAEbo2CKlthzLVET3/BnL/GaZYwsptEHAmH7Ty0J8d1n0B8azpVbd6UOVH9hSBWw=",
+      "Techmino Field:eJxFzUsKADEIA1AMCqEE3PX+Rx1rK5PVU/zsXbE9+dWFu9uqABFuFYAROlqk9JSjTEW8nl+x5L3LHC2k8AQBI/3S3YV4/7Jy5DXNvuLW04VTfdhYBWw=",
+      "Techmino Field:eJxFzUsKADEIA1AMCqEE3PX+Rx1rK5PVU/zsXbE9+dWFu9uqABFuFYAROlqk9JSjTEW8nl+x5L3LHC2k8AQBI/3S3YV4/7Jy5DXNvuLW04VTfdhYBWw=",
+      "Techmino Field:eJxFzUEKADEIA0AMCqEEvPX/T123VprTWIzdu2J78nQGd7dVASLcKgAj9GuR0lWOMhVx37zFkp8uc7SQwhUEjPSk7kLsf1k55drmPfNvt8w+2HwFbA==",
+      "Techmino Field:eJxFzUEKADEIA0AMClIC3vr/p27WVprTVIzdW7E9eeqHu9tSgAg3BcgI/lqZ5FWNqhhxZ36Uknc3a7RQxBUIjPjE0wXz/JtKl7Ut9CHYB6KhBWI=",
+      "Techmino Field:eJxFzsEKQCEIRFEcRpAYcNf/f+rzWdJdnSKrvSvb01MvSNqqAHdaBYS7fq0I6SpHmXK/ezyKEns2crSQwhUEjPSkMwvFeTcqGv8fWLBlffrcaB/YcAVs",
+      "Techmino Field:eJxFzUsKADEIA1AMCqEE3PX+Rx1rK5PVU/zsXbE9+dWFu9uqABFuFYAROlqk9JSjTEW8nl+x5L3LHC2k8AQBI/3S3YV4/7Jy5DXNvuLW04VTfdhYBWw="
+    ],
+    "end": [
+      "Techmino Field:eJxFzkEKACEMQ1EaWggS6M77H3XiqPhXT6HVOV3M29N/yMwYDqjKcACrtDRI6aivulV17nKLVv6z7KuBFo4g4EpP2rMQ97t0VvoHwbXFqxAfookFYg==",
+      "Techmino Field:eJxFzkEKACEMQ1EaWggS6M77H3XiqPhXT6HVOV3M29N/yMwYDqjKcACrtDRI6aivulV17nKLVv6z7KuBFo4g4EpP2rMQ97t0VvoHwbXFqxAfookFYg==",
+      "Techmino Field:eJxFzlEKACEIBFAcRpAY8K/7H3VdS5oPeUVqe1dsT576QNJWBXCnVYBw168VIV3lKFPu945HUWL3Ro4WUriCgJGedHqhOHujUmL9wILMf1a/tuz6AdtbBaE=",
+      "Techmino Field:eJxFzlEKACEIBFAcRpAY8K/7H3VdS5oPeUVqe1dsT576QNJWBXCnVYBw168VIV3lKFPu945HUWL3Ro4WUriCgJGedHqhOHujUmL9wILMf1a/tuz6AdtbBaE=",
+      "Techmino Field:eJwTFQUCRlEYQLBgHCQ5IBhoFsg5qC5ihJAAqVwK8Q==",
+      "Techmino Field:eJwTFQUCRlEYQLBgHCQ5IBhoFsg5qC5ihJAAqVwK8Q==",
+      "Techmino Field:eJwTFQUCRlEYQLBgHCQ5IBhoFsg5qC5ihJAAqVwK8Q==",
+      "Techmino Field:eJwTFQUCRlEYQLBgHCQ5IBhoFsg5qC5ihJAAqVwK8Q=="
+    ]
+  },
+  {
+    "name": "Why can't the other side?",
+    "repeatCount": 4,
+    "interval": 100,
+    "begin": [
+      "Techmino Field:eJwTYxSDAQQLyAYCOAsmABFkhDMZaQm4gABIAQC2oQOP",
+      "Techmino Field:eJwTYxSDAQQLyAYCOAsmABFkhDMZaQe4gADMAAC26QOP",
+      "Techmino Field:eJwTYxSDAQQLyAYCOAsmABFkhDMZKQNcxLAAuPMDjw==",
+      "Techmino Field:eJwTYxSDAQQLyAYCOAsmABFkhDMZiQdcxLAAdVUDew==",
+      "Techmino Field:eJwTYxSDAQQLyAYCOAsmABFkhDMZsQMuYlgAM0cDZw==",
+      "Techmino Field:eJwTYxSDAQQLyAYCOAsmABFkhDOBmAvOw8MCAPK6A1M=",
+      "Techmino Field:eJwTYxSDAQQLyAYCOAtKcUEEYSxGBIsRwQIAs8wDPw==",
+      "Techmino Field:eJwTYxSDAQRLTIyLkZERzgJLMjKCxBgRLEYxAHZuAys="
+    ],
+    "loop": [
+      "Techmino Field:eJwTYxSDAQQLyAYCOAtEcQEBRJARBsQAdfADKw==",
+      "Techmino Field:eJwTYxSDAQRLTIyLkZERzgJLMjKCxBgRLEYxAHZuAys=",
+      "Techmino Field:eJwTYxSDAQQLyAYCOAtCcQEBiM0IA2IAdagDKw==",
+      "Techmino Field:eJwTYxSDAQQLyOZiZISzwBQQAMUYESxGMQB2SgMr",
+      "Techmino Field:eJwTYxSDAQRLTIyLkZERzgJLMjKCxBgRLEYxAHZuAys="
+    ],
+    "end": [
+      "Techmino Field:eJwTYxSDAQQLyAYCOAtEcQEBRJARBsQAdfADKw==",
+      "Techmino Field:eJwTYxSDAQRLTIyLkZERzgJLMjKCxBgRLEYxAHZuAys=",
+      "Techmino Field:eJwTYxSDAQQLyAYCOAtCcQEBiM0IA2IAdagDKw==",
+      "Techmino Field:eJwTYxSDAQQLyAYCOAtCcQEBiM0IA2IAdagDKw==",
+      "Techmino Field:eJwTYxSDAQQLyAYCOAtCiQIBiM0IA2IAeH4DVw==",
+      "Techmino Field:eJwTYxSDAQQLyAYCOAtCiQIBiM0IA2IAeH4DVw==",
+      "Techmino Field:eJwTYxSDAQQLyAYCOAtCiQIBiM0IA2IAeH4DVw==",
+      "Techmino Field:eJwTYxSDAQQLyAYCOAtCiQIBiM0IA2IAeH4DVw=="
+    ]
+  }
+]
