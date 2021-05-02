@@ -1,23 +1,39 @@
 export default {
-  about: 'About',
-  tutorial: 'Tutorial',
-  language: 'Language',
+  header: {
+    about: 'About',
+    tutorial: 'Tutorial',
+    login: 'Login',
+    language: 'Language',
+  },
   carousel: {
-    title:{
-      title:'电脑/手机双端专业方块游戏',
-      layouts:'可调方块贴图和初始朝向',
-      mods:'特殊玩法Mod',
-      customGame:'高级自定义沙盒',
-      customField:'自由场地智能绘制',
-      musicRoom:'自主设计的背景音乐与音效',
+    title: {
+      title: 'PC/Mobile professional block game',
+      layouts: 'Adjustable block textures and initial layouts',
+      mods: 'Various distinctive mods',
+      customGame: 'Highly customized sandbox',
+      customField: 'Intelligent game field drawing',
+      musicRoom: 'Independently designed BGM & SE',
     },
-    description:{
-      title:'单机对战应有尽有(还在不断更新)',
-      layouts:'丰富美观的方块皮肤任意组合',
-      mods:'挑战极限中的极限',
-      customGame:'轻松完成各种实验',
-      customField:'简单易用功能强大',
-      musicRoom:'各种音乐随时回顾',
+    description: {
+      title: 'With both single player and online combat',
+      layouts: 'Rich and beautiful square skin with combination',
+      mods: 'Challenge your mind and skill',
+      customGame: 'Easily achieve all kinds of experiments',
+      customField: 'Easy to use and powerful',
+      musicRoom: 'Review musics you liked at any time',
     },
+  },
+  nutshell: {
+    primary: 'Subvert Your Understanding of Block Stacking Games',
+    minors: [
+      "Professional Game Rules",
+      "Highly Customized",
+      "Easy To Install",
+      "Cross-platform Support",
+    ]
+  },
+  joinNow: {
+    qq: 'Join QQ Group',
+    discord: 'Join Discord Server',
   }
 }

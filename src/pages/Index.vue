@@ -12,11 +12,37 @@
         <div id="logo-container" ref="logoContainer" class="full-width" style="height:600px">
           <AnimatedLogo/>
         </div>
-        <div v-for="n in 400" :key="n" class="q-py-xs">
-          Lorem ipsum dolor sit amet, consectetur adipisicing
-          elit, sed do eiusmod tempor incididunt ut labore et
-          dolore magna aliqua.
+        <div class="column full-width items-center">
+          <div class="text-h2 text-primary text-weight-bold q-pb-lg">
+            {{ $t('nutshell.primary') }}
+          </div>
+          <div
+            class="text-h4 text-info text-weight-thin q-pb-md"
+            v-for="item in $t('nutshell.minors')"
+            :key="item">
+            {{ item }}
+          </div>
         </div>
+      </div>
+      <div class="row full-width justify-center q-pa-xl">
+        <q-btn
+          class="q-mx-md"
+          color="blue"
+          icon="fab fa-qq"
+          size="lg"
+          :label="$t('joinNow.qq')"
+          type="a"
+          href="https://jq.qq.com/?_wv=1027&k=EXHlUEpX"
+          target="_blank"/>
+        <q-btn
+          class="q-mx-md"
+          color="blue-grey"
+          icon="fab fa-discord"
+          size="lg"
+          :label="$t('joinNow.discord')"
+          type="a"
+          href="https://discord.gg/zSXzwkUkVe"
+          target="_blank"/>
       </div>
     </q-scroll-area>
   </q-page>
@@ -45,7 +71,7 @@ export default {
     }
   },
   methods: {
-    resizeLogoContainer(){
+    resizeLogoContainer() {
       this.$refs.logoContainer.style.height = window.innerWidth / 3 + "px";
     },
     async animateScroll() {

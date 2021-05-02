@@ -145,15 +145,20 @@
         </div>
       </q-carousel-control>
       <q-carousel-control position="bottom">
-        <div class="row justify-center">
+        <div
+          v-ripple
+          class="q-py-lg cursor-pointer"
+          @click="$emit('scroll-down')">
           <q-icon
-            v-ripple
-            class="full-width q-pt-md q-pb-xl"
+            id="icon-effect"
+            class="absolute-center q-pt-md q-pb-xl"
             size="xl"
-            color="white"
-            name="expand_more"
-            @click="$emit('scroll-down')"
-            style="cursor: pointer"/>
+            name="keyboard_arrow_down"/>
+          <q-icon
+            class="absolute-center q-pt-md q-pb-xl"
+            size="xl"
+            name="keyboard_arrow_down"
+            style="color: rgba(255, 255, 255, 0.5);"/>
         </div>
       </q-carousel-control>
     </template>
@@ -183,7 +188,7 @@ export default {
     resizeCarousel() {
       this.carouselStyle.height = window.innerHeight + "px";
     },
-    logging(message){
+    logging(message) {
       console.log(message);
     },
     resumeVideo(newVal) {
@@ -225,6 +230,32 @@ export default {
   text-align: center;
   padding: 12px;
   color: white;
-  background-color: rgba(0, 0, 0, .3);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#icon-effect {
+  animation: icon-effect-animation 3s infinite;
+}
+
+@keyframes icon-effect-animation {
+  0% {
+    top: 50%;
+    color: rgba(255, 255, 255, 0.0);
+  }
+  20% {
+    top: 50%;
+    color: rgba(255, 255, 255, 1.0);
+  }
+  50% {
+    top: 50%;
+    color: rgba(255, 255, 255, 1.0);
+  }
+  70% {
+    color: rgba(255, 255, 255, 1.0);
+  }
+  100% {
+    top: 100%;
+    color: rgba(255, 255, 255, 0.0);
+  }
 }
 </style>

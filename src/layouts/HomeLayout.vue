@@ -1,5 +1,5 @@
 <template>
-  <q-layout view="hHh lpR fFf">
+  <q-layout view="hHh lpR fff">
     <q-header class="text-white"
               style="background: linear-gradient(rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.5) 40%, rgba(0,0,0,0.0))">
       <q-toolbar>
@@ -19,7 +19,8 @@
               <g id="logoChars_T">
                 <polygon class="logoClass_Base logoClass_T"
                          points="53,60 1035,0 964,218 660,218 391,1300 231,1154 415,218 0,218"/>
-                <animateMotion id="logoAnime_T" path="M0,0 L0,-150 z" begin="4.25s; logoAnime_O.end + 5s" dur="400ms" repeatCount="0"/>
+                <animateMotion id="logoAnime_T" path="M0,0 L0,-150 z" begin="4.25s; logoAnime_O.end + 5s" dur="400ms"
+                               repeatCount="0"/>
               </g>
               <g id="logoChars_E">
                 <polygon class="logoClass_Base logoClass_E"
@@ -68,8 +69,14 @@
         </q-btn>
         <q-space/>
         <q-toolbar-title/>
-        <q-btn class="q-py-sm q-mr-sm" flat dense>{{ $t('about') }}</q-btn>
-        <q-btn class="q-py-sm q-mr-sm" flat dense>{{ $t('tutorial') }}</q-btn>
+        <!--<q-btn class="q-py-sm q-mr-sm" flat dense>{{ $t('about') }}</q-btn>-->
+        <q-btn
+          class="q-py-sm q-mr-sm"
+          flat
+          dense
+          to="/start/pick-quasar-flavour">
+          {{ $t('header.login') }}
+        </q-btn>
         <q-select
           class="q-py-sm"
           borderless
@@ -86,11 +93,9 @@
         </q-select>
       </q-toolbar>
     </q-header>
-
     <q-page-container>
       <router-view/>
     </q-page-container>
-
   </q-layout>
 </template>
 
