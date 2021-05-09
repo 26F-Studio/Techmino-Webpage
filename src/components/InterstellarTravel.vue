@@ -1,5 +1,5 @@
 <template>
-  <div id="pixi-interstellar" class="fullscreen" style="z-index: -10"></div>
+  <div id="pixi-interstellar" class="absolute-full"></div>
 </template>
 
 <script>
@@ -100,7 +100,9 @@ export default {
       cameraZ += delta * 10 * baseSpeed;
       for (let i = 0; i < minoAmount; i++) {
         const star = stars[i];
-        if (star.z < cameraZ) randomizeStar(star);
+        if (star.z < cameraZ) {
+          randomizeStar(star);
+        }
 
         const z = star.z - cameraZ;
         star.graphics.x = star.x * (fov / z) * app.renderer.screen.width + app.renderer.screen.width / 2;

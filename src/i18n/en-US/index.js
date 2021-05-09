@@ -4,6 +4,10 @@ export default {
     tutorial: 'Tutorial',
     login: 'Login',
     language: 'Language',
+    user:{
+      profile: 'Profile',
+      logout: 'Logout',
+    },
   },
   carousel: {
     title: {
@@ -35,5 +39,43 @@ export default {
   joinNow: {
     qq: 'Join QQ Group',
     discord: 'Join Discord Server',
+  },
+  mainDrawer:{
+    homePage:'Home Page',
+    githubRepo:'Github Repository',
+  },
+  login: {
+    title: 'Login',
+    emailLabel: 'Email',
+    emailEmpty: 'Please enter your email',
+    emailViolation: 'Invalid email',
+    passwordLabel: 'Password',
+    passwordEmpty: 'Please enter your password',
+    passwordViolation: 'Invalid password',
+    rememberMe: 'Remember me',
+    submitButton: 'Login',
+  },
+  profile: {
+    fallback: {
+      uid: "N/A",
+      username: 'Guest',
+      motto: 'Welcome to Techmino',
+      avatar: 'images/placeholder_avatar.svg',
+    },
+    editProfile: 'Edit profile',
+  },
+  cropper: {
+    preview: 'Preview: ',
+    uploadImage: 'Upload image',
+    fileHint: 'Only supports jpg, jpeg, webp, png and bmp formats',
+    fileSize: 'File size: ',
+    uploadFailed: 'Upload failed, try another one?',
+    setAvatar: 'Set avatar',
+  },
+  notification: {
+    autoLogin: 'Automatically logged in',
+    submitSuccess: 'Successfully submitted',
+    logout: 'Successfully logged out',
+    unknownError: 'Something went wrong... May be a bug?'
   }
 }

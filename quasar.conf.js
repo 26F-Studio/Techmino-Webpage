@@ -16,11 +16,12 @@ module.exports = function (/* ctx */) {
     // https://v1.quasar.dev/quasar-cli/prefetch-feature
     // preFetch: true,
 
-    // app boot file (/src/boot)
+    // app boot file (/src/boot)W
     // --> boot files are part of "main.js"
     // https://v1.quasar.dev/quasar-cli/boot-files
     boot: [
-      'i18n'
+      'thirdParties',
+      'i18n',
     ],
 
     // https://v1.quasar.dev/quasar-cli/quasar-conf-js#Property%3A-css
@@ -72,7 +73,7 @@ module.exports = function (/* ctx */) {
     // Full list of options: https://v1.quasar.dev/quasar-cli/quasar-conf-js#Property%3A-devServer
     devServer: {
       https: false,
-      port: 8080,
+      port: 10026,
       open: true // opens browser window automatically
     },
 
@@ -98,7 +99,10 @@ module.exports = function (/* ctx */) {
 
       // Quasar plugins
       plugins: [
-        'Loading'
+        'Cookies',
+        'Loading',
+        'LocalStorage',
+        'SessionStorage',
       ]
     },
 

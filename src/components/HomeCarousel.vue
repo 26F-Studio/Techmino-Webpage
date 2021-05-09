@@ -18,7 +18,7 @@
         ref="videoTitle"
         type="video"
         background-color="transparent"
-        source="videos/Title.webm"
+        source="videos/Title.mp4"
         class="full-media-player"
         :autoplay="true"
         :loop="true"
@@ -36,7 +36,7 @@
         ref="videoLayouts"
         type="video"
         background-color="transparent"
-        source="videos/Layouts.webm"
+        source="videos/Layouts.mp4"
         class="full-media-player"
         :autoplay="true"
         :loop="true"
@@ -54,7 +54,7 @@
         ref="videoMods"
         type="video"
         background-color="transparent"
-        source="videos/Mods.webm"
+        source="videos/Mods.mp4"
         class="full-media-player"
         :autoplay="true"
         :loop="true"
@@ -72,7 +72,7 @@
         ref="videoCustomGame"
         type="video"
         background-color="transparent"
-        source="videos/CustomGame.webm"
+        source="videos/CustomGame.mp4"
         class="full-media-player"
         :autoplay="true"
         :loop="true"
@@ -90,7 +90,7 @@
         ref="videoCustomField"
         type="video"
         background-color="transparent"
-        source="videos/CustomField.webm"
+        source="videos/CustomField.mp4"
         class="full-media-player"
         :autoplay="true"
         :loop="true"
@@ -108,7 +108,7 @@
         ref="videoMusicRoom"
         type="video"
         background-color="transparent"
-        source="videos/MusicRoom.webm"
+        source="videos/MusicRoom.mp4"
         class="full-media-player"
         :autoplay="true"
         :loop="true"
@@ -174,13 +174,14 @@ export default {
       slide: 1,
       carouselStyle: {
         height: "0px"
-      }
+      },
+      nextTimer: null,
     }
   },
   mounted() {
     this.resizeCarousel();
     window.onresize = this.resizeCarousel;
-    setInterval(() => {
+    this.nextTimer = setInterval(() => {
       this.$refs.carousel.next();
     }, 9000);
   },
@@ -212,6 +213,11 @@ export default {
           this.$refs.videoMusicRoom.play();
           break;
       }
+    }
+  },
+  beforeDestroy() {
+    if (this.nextTimer !== null) {
+      clearInterval(this.nextTimer);
     }
   }
 }

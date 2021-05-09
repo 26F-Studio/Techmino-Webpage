@@ -48,36 +48,34 @@ export default {
     this.timer = setTimeout(() => {
       this.$q.loading.hide();
       this.timer = void 0;
-      axios.get('/tech/api/v1/app/register', {
-        params: {
+      axios.post('/tech/api/v1/user/register', {
           id: tempID,
           code: tempCode
-        }
       }).then((response) => {
         let data = response.data;
         console.log(response.data);
         this.showResult = true;
-        if (data.type === 'Success') {
+        if (data.type === "Success") {
           this.resultIcon = "check_circle";
           this.resultColor = "text-green";
           this.resultMessage = data.reason;
         } else {
           this.resultIcon = "dangerous";
           this.resultColor = "text-red";
-          this.resultMessage = "Something went wrong..."
+          this.resultMessage = this.$t("notification.unknownError");
         }
       }).catch((error) => {
         let data = error.response.data;
         console.log(error.response);
         this.showResult = true;
-        if (data.type === 'Error') {
+        if (data.type === "Error") {
           this.resultIcon = "warning";
           this.resultColor = "text-amber";
           this.resultMessage = data.reason;
         } else {
           this.resultIcon = "dangerous";
           this.resultColor = "text-red";
-          this.resultMessage = "Something went wrong..."
+          this.resultMessage = this.$t("notification.unknownError");
         }
       });
     }, 3000)
