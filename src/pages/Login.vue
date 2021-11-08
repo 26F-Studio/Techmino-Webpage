@@ -9,7 +9,7 @@
           method="post"
           @submit="onSubmit">
           <div class="text-h4">
-            {{$t('login.title')}}
+            {{ $t('login.title') }}
           </div>
           <q-input
             filled
@@ -75,7 +75,7 @@ export default {
             path: '/user/profile',
             query: {
               uid: this.$q.cookies.get("uid"),
-              authToken: this.$q.cookies.get("authToken"),
+              webToken: this.$q.cookies.get("webToken"),
             }
           });
         }, 2000);
@@ -140,7 +140,7 @@ export default {
               path: '/user/profile',
               query: {
                 uid: data.data.uid,
-                authToken: data.data.authToken,
+                webToken: data.data.webToken,
               }
             });
           }, 2000);

@@ -5,7 +5,7 @@
     >
       <svg
         v-for="character in logo.characters"
-        :viewBox="[-15, -15, 7500, 1500]"
+        :viewBox="[-30, -30, 7500, 1500]"
         :key="character.name"
         :x="character.position.x + 'px'"
         :y="character.position.y + 'px'"
@@ -16,13 +16,40 @@
             class="logoClass_Base"
             :points="character.path"
           />
-          <!--            <animateMotion-->
-          <!--              id="logoAnime_T"-->
-          <!--              path="M-50,-200 L0,0"-->
-          <!--              begin="1s; logoAnime_O.end + 5s"-->
-          <!--              dur="3s"-->
-          <!--              repeatCount="0"-->
-          <!--            />-->
+          <animate
+            :id="character.name + '_FlashInFill'"
+            class="flash-in-animate"
+            attributeName="fill"
+            to="#FFFFFF"
+            begin="indefinite"
+            dur="200ms"
+            fill="freeze"/>
+          <animate
+            attributeName="stroke-opacity"
+            to="1.0"
+            :begin="character.name + '_FlashInFill.begin'"
+            dur="200ms"
+            fill="freeze"/>
+          <animate
+            attributeName="stroke-width"
+            to="50px"
+            :begin="character.name + '_FlashInFill.begin'"
+            dur="200ms"
+            fill="freeze"/>
+
+          <animate
+            :id="character.name + '_FlashOutFill'"
+            attributeName="fill"
+            :to="character.fillColor"
+            :begin="character.name + '_FlashInFill.end'"
+            dur="1s"
+            fill="freeze"/>
+          <animate
+            attributeName="stroke-width"
+            to="40px"
+            :begin="character.name + '_FlashInFill.end'"
+            dur="1s"
+            fill="freeze"/>
         </g>
       </svg>
     </svg>
@@ -40,22 +67,27 @@ export default {
     }
   },
   mounted() {
-    let frameLimit = 90;
+    let frameLimit = 70;
     let frameInterval = 33;
     this.logo.initPosition();
     let inInterval = setInterval(() => {
-      this.logo.animate(frameLimit);
+      this.logo.animateIn(frameLimit);
     }, frameInterval);
     setTimeout(() => {
       clearInterval(inInterval);
+      document.querySelectorAll(".flash-in-animate").forEach((element) => {
+        element.beginElement();
+      });
     }, frameLimit * frameInterval);
   },
   computed: {
     responsiveRatio() {
       if (this.$q.screen.lt.md) {
-        return 16 / 7;
+        return 16 / 9;
+      } else if (this.$q.screen.lt.lg) {
+        return 16 / 6;
       } else {
-        return 16 / 5;
+        return 16 / 4;
       }
     }
   }

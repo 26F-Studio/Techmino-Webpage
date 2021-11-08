@@ -7,7 +7,7 @@
 export default {
   name: 'App',
   created: function () {
-    this.$q.dark.set(true)
+    this.$q.dark.set(true);
     this.$i18n.locale = this.$q.lang.getLocale();
   }
 }

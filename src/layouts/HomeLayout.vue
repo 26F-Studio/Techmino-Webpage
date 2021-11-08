@@ -3,7 +3,7 @@
     <q-header class="text-white"
               style="background: linear-gradient(rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.5) 40%, rgba(0,0,0,0.0))">
       <q-toolbar>
-        <HeaderLogo/>
+        <HeaderLogo :mini="false"/>
         <q-space/>
         <q-toolbar-title/>
         <LoginState/>

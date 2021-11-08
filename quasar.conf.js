@@ -6,9 +6,10 @@
 // Configuration for your app
 // https://v1.quasar.dev/quasar-cli/quasar-conf-js
 /* eslint-env node */
-const ESLintPlugin = require('eslint-webpack-plugin')
+const ESLintPlugin = require('eslint-webpack-plugin');
+const {configure} = require('quasar/wrappers');
 
-module.exports = function (/* ctx */) {
+module.exports = configure(function (ctx) {
   return {
     // https://v1.quasar.dev/quasar-cli/supporting-ts
     supportTS: false,
@@ -96,7 +97,7 @@ module.exports = function (/* ctx */) {
       //
       // components: [],
       // directives: [],
-
+      cssAddon: true,
       // Quasar plugins
       plugins: [
         'Cookies',
@@ -199,4 +200,4 @@ module.exports = function (/* ctx */) {
       }
     }
   }
-}
+});

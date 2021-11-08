@@ -2,39 +2,106 @@
   <div class="row q-pa-sm">
     <div class="col-md-4 col-xs-12 q-pa-sm">
       <q-card flat dark class="">
-        <q-card-section class="text-center">
-          <q-img
-            v-ripple
-            class="cursor-pointer"
-            :src="info.avatar"
-            style="max-width:280px;border-radius:50%"/>
+        <q-card-section class="row justify-center">
+          <q-responsive
+            ref="avatarBox"
+            class="col-6"
+            :ratio="0.5">
+            <q-btn
+              round
+              dense
+              @click="expandAvatar=true"
+              style="z-index: 0">
+              <q-img :src="info.avatar" style="border-radius: 50%"/>
+            </q-btn>
+          </q-responsive>
+          <div class="row col-12 absolute-top justify-center">
+            <div class="row col-6 justify-end">
+              <q-btn
+                v-if="verified"
+                icon="edit"
+                color="primary"
+                round
+                push
+                :size="editIconSize + 'px'"
+                @click="editAvatar=true"
+                :style="editIconStyle"/>
+            </div>
+          </div>
         </q-card-section>
         <q-card-section class="q-px-md">
-          <div class="text-h5 q-pt-md text-weight-bold">
+          <div v-if="!editProfile" class="text-h5 q-pt-md text-weight-bold">
             {{ info.username }}
           </div>
+          <q-input
+            v-if="editProfile"
+            class="q-pt-md"
+            clearable
+            dense
+            v-model="info.username"/>
           <div class="text-h6 text-grey text-weight-light">
             #{{ info.uid }}
           </div>
-          <div class="text-subtitle1 q-pt-md text-weight-medium">
+          <div v-if="!editProfile" class="text-subtitle1 q-pt-md text-weight-medium">
             {{ info.motto }}
           </div>
+          <q-input
+            v-if="editProfile"
+            class="q-pt-md"
+            clearable
+            dense
+            v-model="info.motto"/>
         </q-card-section>
-        <q-card-section class="q-px-md" v-if="verified">
+        <q-card-section class="row q-px-md justify-between" v-if="verified">
           <q-btn
-            class="full-width"
+            v-if="!editProfile"
+            class="col-12"
+            :dense="$q.screen.lt.md"
             @click="editProfile=true">
             {{ $t("profile.editProfile") }}
+          </q-btn>
+          <q-btn
+            v-if="editProfile"
+            class="col-5 q-mx-sm"
+            :dense="$q.screen.lt.md"
+            @click="cancelProfile">
+            {{ $t("profile.cancelEdit") }}
+          </q-btn>
+          <q-btn
+            v-if="editProfile"
+            class="col-5 q-mx-sm"
+            color="primary"
+            :dense="$q.screen.lt.md"
+            :loading="infoLoading"
+            @click="uploadProfile">
+            {{ $t("profile.confirmEdit") }}
           </q-btn>
         </q-card-section>
       </q-card>
     </div>
     <q-dialog
+      v-model="expandAvatar"
+      transition-show="slide-down"
+      transition-hide="slide-right">
+      <q-card style="width: 700px; max-width: 80vw;">
+        <q-card-section class="row items-center q-pb-none">
+          <div class="text-h6">{{ $t("profile.viewAvatar") }}</div>
+          <q-space/>
+          <q-btn icon="close" flat round dense v-close-popup/>
+        </q-card-section>
+
+        <q-card-section class="row items-center justify-around q-pa-md">
+          <q-img :src="info.avatar"/>
+        </q-card-section>
+      </q-card>
+    </q-dialog>
+
+    <q-dialog
       v-if="verified"
-      v-model="editProfile"
+      v-model="editAvatar"
       persistent
       transition-show="slide-right"
-      transition-hide="slide-up">
+      transition-hide="slide-down">
       <q-card style="width: 700px; max-width: 80vw;">
         <q-card-section class="row items-center q-pb-none">
           <div class="text-h6">{{ $t("profile.editProfile") }}</div>
@@ -65,38 +132,42 @@
           <div class="row col-8 justify-end q-pa-sm">
             <q-btn-group>
               <q-btn
-                class="q-mx-sm"
+                class="q-mx-md-sm q-ml-xs-xs"
                 color="primary"
                 icon-right="zoom_in"
+                :dense="$q.screen.lt.md"
                 @click="$refs.cropper.changeScale(1)"/>
               <q-btn
-                class="q-mx-sm"
+                class="q-mx-md-sm q-ml-xs-xs"
                 color="primary"
                 icon-right="zoom_out"
+                :dense="$q.screen.lt.md"
                 @click="$refs.cropper.changeScale(-1)"/>
               <q-btn
-                class="q-mx-sm"
+                class="q-mx-md-sm q-ml-xs-xs"
                 color="primary"
                 icon-right="rotate_left"
+                :dense="$q.screen.lt.md"
                 @click="$refs.cropper.rotateLeft()"/>
               <q-btn
-                class="q-mx-sm"
+                class="q-mx-md-sm q-ml-xs-xs"
                 color="primary"
                 icon-right="rotate_right"
+                :dense="$q.screen.lt.md"
                 @click="$refs.cropper.rotateRight()"/>
             </q-btn-group>
           </div>
 
-          <div class="gt-sm col-8 q-ma-md" :style="previewSizes[256]">
+          <div class="gt-sm col-8 q-ma-sm" :style="previewSizes[256]">
             <q-img :src="realTimeData.url" :style="realTimeData.img"/>
           </div>
-          <div class="gt-xs col-4 q-ma-md" :style="previewSizes[128]">
+          <div class="gt-xs col-4 q-ma-sm" :style="previewSizes[128]">
             <q-img :src="realTimeData.url" :style="realTimeData.img"/>
           </div>
-          <div class="col-2 q-ma-md" :style="previewSizes[64]">
+          <div class="col-2 q-ma-sm" :style="previewSizes[64]">
             <q-img :src="realTimeData.url" :style="realTimeData.img"/>
           </div>
-          <div class="col-1 q-ma-md" :style="previewSizes[32]">
+          <div class="col-1 q-ma-sm" :style="previewSizes[32]">
             <q-img :src="realTimeData.url" :style="realTimeData.img"/>
           </div>
         </q-card-section>
@@ -109,6 +180,7 @@
             clearable
             counter
             outlined
+            :dense="$q.screen.lt.md"
             :label="$t('cropper.uploadImage')"
             :counter-label="getCounterLabel"
             v-model="cropper.file"
@@ -124,6 +196,8 @@
         <q-card-section class="row justify-end q-px-md">
           <q-btn
             color="primary"
+            :dense="$q.screen.lt.md"
+            :loading="avatarLoading"
             @click="uploadImage">
             {{ $t('cropper.setAvatar') }}
           </q-btn>
@@ -151,8 +225,21 @@ export default {
         motto: this.$t("profile.fallback.motto"),
         avatar: this.$t("profile.fallback.avatar"),
       },
-      verified: false,
+      originalInfo: {
+        username: this.$t("profile.fallback.username"),
+        motto: this.$t("profile.fallback.motto"),
+      },
+      verified: true,
+      editIconSize: 0,
+      editIconStyle: {
+        top: 0 + 'px',
+        'z-index': 1
+      },
+      expandAvatar: false,
       editProfile: false,
+      infoLoading: false,
+      editAvatar: false,
+      avatarLoading: false,
       cropper: {
         file: null,
         style: {
@@ -175,15 +262,14 @@ export default {
   created() {
     this.cropper.img = this.info.avatar;
     window.onresize = () => {
-      this.editProfile = false;
+      this.editAvatar = false;
+      this.resizeEditIcon();
     };
-  },
-  mounted() {
     let uid = parseInt(this.$route.query.uid.toString());
-    let authToken = this.$route.query.authToken;
-    this.getProfileInfo(uid, authToken).then((body)=>{
+    let webToken = this.$route.query.webToken;
+    this.getProfileInfo(uid, webToken).then((body) => {
       if (body.type === "Success") {
-        this.getAvatar(uid).then((body)=>{
+        this.getAvatar(uid).then((body) => {
           if (body.type === "Success") {
             if (body.data) {
               this.info.avatar = body.data.avatar;
@@ -192,10 +278,14 @@ export default {
             } else {
               this.info.avatar = this.$q.localStorage.getItem("avatar");
             }
+            this.cropper.img = this.info.avatar;
           }
-        }).catch((body)=>{
+        }).catch((body) => {
           console.log(body);
         });
+        this.originalInfo.uid = body.data.uid;
+        this.originalInfo.username = body.data.username;
+
         this.info.uid = body.data.uid;
         this.info.username = body.data.username;
         this.info.motto = body.data.motto;
@@ -208,7 +298,7 @@ export default {
           message: this.$t("notification.unknownError").toString()
         });
       }
-    }).catch((body)=>{
+    }).catch((body) => {
       if (body.type === "Error") {
         this.$q.notify({
           color: 'amber',
@@ -226,12 +316,19 @@ export default {
       }
     });
   },
+  mounted() {
+    this.resizeEditIcon();
+  },
   methods: {
-    getProfileInfo(uid, authToken) {
+    resizeEditIcon() {
+      this.editIconSize = this.$refs.avatarBox.$el.getBoundingClientRect().height * 0.1;
+      this.editIconStyle.top = this.$refs.avatarBox.$el.getBoundingClientRect().height * 0.8 + "px";
+    },
+    getProfileInfo(uid, webToken) {
       return new Promise((resolve, reject) => {
         axios.post('/tech/api/v1/user/profile/info', {
           uid: uid,
-          authToken: authToken,
+          webToken: webToken,
         }).then((res) => {
           resolve(res.data);
         }).catch((err) => {
@@ -293,13 +390,68 @@ export default {
       // reader.readAsDataURL(file)
       reader.readAsArrayBuffer(this.cropper.file);
     },
+    cancelProfile() {
+      this.info.username = this.originalInfo.username;
+      this.info.motto = this.originalInfo.motto;
+      this.editProfile = false;
+    },
+    uploadProfile() {
+      this.infoLoading = true;
+      let uid = parseInt(this.$route.query.uid.toString());
+      let webToken = this.$route.query.webToken;
+      axios.put('/tech/api/v1/user/profile/info', {
+        uid: uid,
+        webToken: webToken,
+        username: this.info.username,
+        motto: this.info.motto,
+      }).then((response) => {
+        let data = response.data;
+        if (data.type === "Success") {
+          this.$q.notify({
+            color: 'green',
+            textColor: 'white',
+            icon: 'cloud_done',
+            message: this.$t("notification.submitSuccess").toString()
+          });
+          this.editProfile = false;
+        } else {
+          this.$q.notify({
+            color: 'red',
+            textColor: 'white',
+            icon: 'fas fa-bug',
+            message: this.$t("notification.unknownError").toString()
+          });
+        }
+        this.infoLoading = false;
+      }).catch((error) => {
+        let data = error.response.data;
+        if (data.type === "Error") {
+          this.$q.notify({
+            color: 'amber',
+            textColor: 'white',
+            icon: 'warning',
+            message: data.reason
+          });
+          this.cancelProfile();
+        } else {
+          this.$q.notify({
+            color: 'red',
+            textColor: 'white',
+            icon: 'fas fa-bug',
+            message: this.$t("notification.unknownError").toString()
+          });
+        }
+        this.infoLoading = false;
+      });
+    },
     uploadImage() {
+      this.avatarLoading = true;
       this.$refs.cropper.getCropData(croppedAvatar => {
         let uid = parseInt(this.$route.query.uid.toString());
-        let authToken = this.$route.query.authToken;
+        let webToken = this.$route.query.webToken;
         axios.put('/tech/api/v1/user/profile/avatar', {
           uid: uid,
-          authToken: authToken,
+          webToken: webToken,
           avatar: croppedAvatar
         }).then((response) => {
           let data = response.data;
@@ -314,7 +466,7 @@ export default {
             this.cropper.img = croppedAvatar;
             this.$q.localStorage.set("avatar", croppedAvatar);
             this.$q.localStorage.set("avatarHash", data.data.hash);
-            this.editProfile = false;
+            this.editAvatar = false;
           } else {
             this.$q.notify({
               color: 'red',
@@ -323,6 +475,7 @@ export default {
               message: this.$t("notification.unknownError").toString()
             });
           }
+          this.avatarLoading = false;
         }).catch((error) => {
           let data = error.response.data;
           if (data.type === "Error") {
@@ -340,6 +493,7 @@ export default {
               message: this.$t("notification.unknownError").toString()
             });
           }
+          this.avatarLoading = false;
         });
       });
     }

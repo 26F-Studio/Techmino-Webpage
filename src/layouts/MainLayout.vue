@@ -4,7 +4,7 @@
     <q-header elevated class="bg-primary text-white">
       <q-toolbar>
         <q-btn dense flat round icon="menu" @click="left = !left"/>
-        <HeaderLogo mini/>
+        <HeaderLogo :mini="true"/>
         <q-space/>
         <q-toolbar-title/>
         <LoginState/>

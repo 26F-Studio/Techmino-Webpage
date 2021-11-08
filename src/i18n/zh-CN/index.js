@@ -4,7 +4,7 @@ export default {
     tutorial: '教程',
     login: '登录',
     language: '选择语言',
-    user:{
+    user: {
       profile: '个人资料',
       logout: '登出',
     },
@@ -36,13 +36,17 @@ export default {
       "支持多平台",
     ]
   },
+  downloads: {
+    others: '立刻下载',
+    apple: 'App Store'
+  },
   joinNow: {
     qq: '加入QQ群',
     discord: '加入Discord服务器',
   },
-  mainDrawer:{
-    homePage:'主页',
-    githubRepo:'Github 仓库',
+  mainDrawer: {
+    homePage: '主页',
+    githubRepo: 'Github 仓库',
   },
   login: {
     title: '登录',
@@ -62,7 +66,10 @@ export default {
       motto: '欢迎来到 Techmino',
       avatar: 'images/placeholder_avatar.svg',
     },
+    viewAvatar: '查看头像',
     editProfile: '修改个人资料',
+    cancelEdit: '取消修改',
+    confirmEdit: '保存个人资料',
   },
   cropper: {
     preview: '预览：',

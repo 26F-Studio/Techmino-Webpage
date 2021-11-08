@@ -69,7 +69,7 @@ export default {
       if (data.type === "Success") {
         this.avatarRouter.query = {
           uid: this.$q.cookies.get("uid"),
-          authToken: this.$q.cookies.get("authToken"),
+          webToken: this.$q.cookies.get("webToken"),
         };
         this.loggedIn = true;
         this.getProfileInfo(parseInt(this.$q.cookies.get("uid")));
@@ -86,7 +86,7 @@ export default {
         if (data.type === "Success") {
           this.avatarRouter.query = {
             uid: this.$q.cookies.get("uid"),
-            authToken: this.$q.cookies.get("authToken"),
+            webToken: this.$q.cookies.get("webToken"),
           };
           this.loggedIn = true;
           this.getProfileInfo(parseInt(this.$q.cookies.get("uid")));
@@ -136,7 +136,8 @@ export default {
         message: this.$t("notification.logout").toString()
       });
       this.$q.cookies.remove('uid');
-      this.$q.cookies.remove('authToken');
+      this.$q.cookies.remove('authToken'); // For older methods
+      this.$q.cookies.remove('webToken');
       this.$q.localStorage.remove("avatar");
       this.$q.localStorage.remove("avatarHash");
       this.avatar = null;

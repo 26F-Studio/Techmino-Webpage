@@ -140,8 +140,9 @@ class Logo {
       this.characters[character].style.stroke = "#FFFFFF";
       this.characters[character].style["stroke-opacity"] = 0;
       this.characters[character].style["stroke-width"] = "30px";
-      this.characters[character].style.fill = "none";
+      this.characters[character].style.fill = "rgba(0,0,0,0)";
       this.characters[character].position = {x: 0, y: 0};
+      this.characters[character].animationType = Math.floor(Math.random() * 5);
     }
     this.characters.T.fillColor = "#CC66FF";
     this.characters.E.fillColor = "#7FFFFF";
@@ -162,31 +163,22 @@ class Logo {
     this.characters.O.originalPosition = {x: 5770, y: 330};
 
     this.animations = {
-      T(character, timer) {
+      0(character, timer) {
         character.position.y = character.originalPosition.y + Math.pow(Math.max(60 - timer, 0), 2) / 2;
       },
-      E(character, timer) {
+      1(character, timer) {
         character.position.y = character.originalPosition.y - Math.pow(Math.max(60 - timer, 0), 2) / 2;
       },
-      C(character, timer) {
+      2(character, timer) {
         character.position.x = character.originalPosition.x + Math.sin(new Date().getTime() / 1000 * 3 + 626 * 3) * Math.max(60 - timer, 0) * 10;
         character.position.y = character.originalPosition.y + Math.cos(new Date().getTime() / 1000 * 3 + 626 * 3) * Math.max(60 - timer, 0) * 10;
       },
-      H(character, timer) {
+      3(character, timer) {
         character.position.x = character.originalPosition.x + Math.sin(new Date().getTime() / 1000 * 3 + 626 * 4) * Math.max(60 - timer, 0) * 10;
         character.position.y = character.originalPosition.y - Math.cos(new Date().getTime() / 1000 * 3 + 626 * 4) * Math.max(60 - timer, 0) * 10;
       },
-      M(character, timer) {
-        character.position.y = character.originalPosition.y + Math.pow(Math.max(60 - timer, 0), 2) / 2;
-      },
-      I(character, timer) {
-        character.position.y = character.originalPosition.y + Math.pow(Math.max(60 - timer, 0), 2) / 2;
-      },
-      N(character, timer) {
-        character.position.y = character.originalPosition.y + Math.pow(Math.max(60 - timer, 0), 2) / 2;
-      },
-      O(character, timer) {
-        character.position.y = character.originalPosition.y + Math.pow(Math.max(60 - timer, 0), 2) / 2;
+      4(character, timer) {
+        character.style["stroke-opacity"] = character.style["stroke-opacity"] < 0.6 ? 0.0089 * timer + 0.07 * Math.sin(0.347 * timer) : 0.6;
       },
       fadeIn(character) {
         character.style["stroke-opacity"] = character.style["stroke-opacity"] < 0.6 ? character.style["stroke-opacity"] + 0.01 : 0.6;
@@ -204,12 +196,14 @@ class Logo {
   }
 
 
-  animate(frameLimit) {
+  animateIn(frameLimit) {
     if (this.timer < frameLimit) {
       for (let character in this.characters) {
         if (this.characters.hasOwnProperty(character)) {
-          this.animations[character](this.characters[character], this.timer);
-          this.animations.fadeIn(this.characters[character]);
+          this.animations[this.characters[character].animationType](this.characters[character], this.timer);
+          if (this.characters[character].animationType !== 4) {
+            this.animations.fadeIn(this.characters[character]);
+          }
         }
       }
       this.timer++;

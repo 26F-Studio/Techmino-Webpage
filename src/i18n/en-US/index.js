@@ -4,7 +4,7 @@ export default {
     tutorial: 'Tutorial',
     login: 'Login',
     language: 'Language',
-    user:{
+    user: {
       profile: 'Profile',
       logout: 'Logout',
     },
@@ -36,13 +36,17 @@ export default {
       "Cross-platform Support",
     ]
   },
+  downloads: {
+    others: 'Download now',
+    apple: 'App Store'
+  },
   joinNow: {
     qq: 'Join QQ Group',
     discord: 'Join Discord Server',
   },
-  mainDrawer:{
-    homePage:'Home Page',
-    githubRepo:'Github Repository',
+  mainDrawer: {
+    homePage: 'Home Page',
+    githubRepo: 'Github Repository',
   },
   login: {
     title: 'Login',
@@ -62,7 +66,10 @@ export default {
       motto: 'Welcome to Techmino',
       avatar: 'images/placeholder_avatar.svg',
     },
+    viewAvatar: 'View avatar',
     editProfile: 'Edit profile',
+    cancelEdit: 'Cancel',
+    confirmEdit: 'Commit Profile',
   },
   cropper: {
     preview: 'Preview: ',

@@ -20,7 +20,8 @@
     "vue-cropper": "^0.5.6",
     "vue-i18n": "^8.24.3",
     "vue-rx": "^6.2.0",
-    "vuejs-clipper": "^3.1.2"
+    "vuejs-clipper": "^3.1.2",
+    "webdav": "^4.7.0"
   },
   "devDependencies": {
     "@quasar/app": "^2.0.0",

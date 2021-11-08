@@ -3,22 +3,17 @@
     class="q-py-xs"
     flat
     to="/">
-    <q-avatar v-if="mini && $q.screen.lt.md" class="img-logo" rounded size="1.5rem">
+    <q-avatar
+      class="img-logo"
+      rounded
+      :size="avatarSize">
       <q-img src="icons/favicon-128x128.png"/>
     </q-avatar>
-
-    <q-avatar v-if="mini && $q.screen.gt.sm" class="img-logo" rounded size="2.5rem">
-      <q-img src="icons/favicon-128x128.png"/>
-    </q-avatar>
-
-    <q-avatar v-if="!mini &&$q.screen.lt.md" class="img-logo" rounded size="2rem">
-      <q-img src="icons/favicon-128x128.png"/>
-    </q-avatar>
-
-    <q-avatar v-if="!mini &&$q.screen.gt.sm" class="img-logo" rounded size="3rem">
-      <q-img src="icons/favicon-128x128.png"/>
-    </q-avatar>
-    <div class="column items-center q-py-sm q-px-md" :style="{width: logoWidth}">
+    <div
+      class="column items-center
+       q-py-sm-xs q-py-md-sm
+       q-px-xs-xs q-px-sm-sm q-px-md-md"
+      :style="{width: logoWidth}">
       <svg class="items-center"
            x="500px"
            y="1000px"
@@ -84,14 +79,52 @@ export default {
     mini: Boolean
   },
   data() {
-    return {}
+    return {
+      isMini: this.mini,
+    }
+  },
+  watch:{
+    mini(value){
+      this.isMini = value;
+    }
   },
   computed: {
-    logoWidth() {
-      if (this.mini) {
-        return this.$q.screen.lt.md ? "7rem" : "12rem";
+    avatarSize() {
+      if (this.isMini) {
+        if (this.$q.screen.lt.sm) {
+          return "0.8rem";
+        } else if (this.$q.screen.lt.md) {
+          return "1.5rem";
+        } else {
+          return "2.5rem";
+        }
       } else {
-        return this.$q.screen.lt.md ? "10rem" : "15rem";
+        if (this.$q.screen.lt.sm) {
+          return "1.2rem";
+        } else if (this.$q.screen.lt.md) {
+          return "2rem";
+        } else {
+          return "3rem";
+        }
+      }
+    },
+    logoWidth() {
+      if (this.isMini) {
+        if (this.$q.screen.lt.sm) {
+          return "3rem";
+        } else if (this.$q.screen.lt.md) {
+          return "7rem";
+        } else {
+          return "12rem";
+        }
+      } else {
+        if (this.$q.screen.lt.sm) {
+          return "5rem";
+        } else if (this.$q.screen.lt.md) {
+          return "10rem";
+        } else {
+          return "15rem";
+        }
       }
     }
   }
