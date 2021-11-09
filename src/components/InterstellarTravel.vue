@@ -50,22 +50,22 @@ export default {
           graphics.pivot.y = graphics.height * 0.75;
           break;
         case 3:
-          graphics = new MinoTypeMap.S().generateGraphics(edgeLength, 0x5BED5B);
+          graphics = new MinoTypeMap.S().generateGraphics(edgeLength, 0xED5B5B);
           graphics.pivot.x = graphics.width / 2.0;
           graphics.pivot.y = graphics.height * 0.75;
           break;
         case 4:
-          graphics = new MinoTypeMap.Z().generateGraphics(edgeLength, 0xED5B5B);
+          graphics = new MinoTypeMap.Z().generateGraphics(edgeLength, 0x5BED5B);
           graphics.pivot.x = graphics.width / 2.0;
           graphics.pivot.y = graphics.height * 0.75;
           break;
         case 5:
-          graphics = new MinoTypeMap.J().generateGraphics(edgeLength, 0x5B8AED);
+          graphics = new MinoTypeMap.J().generateGraphics(edgeLength, 0xED955B);
           graphics.pivot.x = graphics.width / 2.0;
           graphics.pivot.y = graphics.height * 0.75;
           break;
         case 6:
-          graphics = new MinoTypeMap.L().generateGraphics(edgeLength, 0xED955B);
+          graphics = new MinoTypeMap.L().generateGraphics(edgeLength, 0x5B8AED);
           graphics.pivot.x = graphics.width / 2.0;
           graphics.pivot.y = graphics.height * 0.75;
           break;
