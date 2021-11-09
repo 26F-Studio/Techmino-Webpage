@@ -336,7 +336,7 @@ class SMino extends BaseMino {
       {dx: +0, dy: +1},
       {dx: -1, dy: +0},
       {dx: +0, dy: +0},
-    ], 0x5BED5B, {x: 0, y: 0}, {
+    ], 0xED5B5B, {x: 0, y: 0}, {
       12: [{dx: -1, dy: +0}, {dx: -1, dy: +1}, {dx: +0, dy: -2}, {dx: -1, dy: +2}, {dx: +0, dy: +1}],
       21: [{dx: +1, dy: +0}, {dx: +1, dy: -1}, {dx: +0, dy: +2}, {dx: +1, dy: -2}, {dx: +1, dy: -2}],
       14: [{dx: +1, dy: +0}, {dx: +1, dy: +1}, {dx: +0, dy: -2}, {dx: +1, dy: -1}, {dx: +1, dy: -2}],
@@ -360,7 +360,7 @@ class ZMino extends BaseMino {
       {dx: +0, dy: +1},
       {dx: +1, dy: +0},
       {dx: +0, dy: +0},
-    ], 0xED5B5B, {x: 0, y: 0}, {
+    ], 0x5BED5B, {x: 0, y: 0}, {
       12: [{dx: -1, dy: +0}, {dx: -1, dy: +1}, {dx: +0, dy: -2}, {dx: -1, dy: +2}, {dx: +0, dy: +1}],
       21: [{dx: +1, dy: +0}, {dx: +1, dy: -1}, {dx: +0, dy: +2}, {dx: +1, dy: -2}, {dx: +1, dy: -2}],
       14: [{dx: +1, dy: +0}, {dx: +1, dy: +1}, {dx: +0, dy: -2}, {dx: +1, dy: -1}, {dx: +1, dy: -2}],
@@ -384,7 +384,7 @@ class JMino extends BaseMino {
       {dx: -1, dy: +0},
       {dx: +1, dy: +0},
       {dx: +0, dy: +0},
-    ], 0x5B8AED, {x: 0, y: 0}, {
+    ], 0xED955B, {x: 0, y: 0}, {
       12: [{dx: -1, dy: +0}, {dx: -1, dy: +1}, {dx: +1, dy: +0}, {dx: +0, dy: -2}, {dx: +1, dy: +1}],
       21: [{dx: +1, dy: +0}, {dx: +1, dy: -1}, {dx: -1, dy: +0}, {dx: +0, dy: +2}, {dx: +1, dy: +2}],
       14: [{dx: +1, dy: +0}, {dx: +1, dy: +1}, {dx: +0, dy: -2}, {dx: +1, dy: -2}, {dx: +1, dy: -1}, {dx: +0, dy: +1}],
@@ -408,7 +408,7 @@ class LMino extends BaseMino {
       {dx: +1, dy: +0},
       {dx: -1, dy: +0},
       {dx: +0, dy: +0},
-    ], 0xED955B, {x: 0, y: 0}, {
+    ], 0x5B8AED, {x: 0, y: 0}, {
       12: [{dx: -1, dy: +0}, {dx: -1, dy: +1}, {dx: +1, dy: +0}, {dx: +0, dy: -2}, {dx: +1, dy: +1}],
       21: [{dx: +1, dy: +0}, {dx: +1, dy: -1}, {dx: -1, dy: +0}, {dx: +0, dy: +2}, {dx: +1, dy: +2}],
       14: [{dx: +1, dy: +0}, {dx: +1, dy: +1}, {dx: +0, dy: -2}, {dx: +1, dy: -2}, {dx: +1, dy: -1}, {dx: +0, dy: +1}],
