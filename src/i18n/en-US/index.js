@@ -33,7 +33,7 @@ export default {
       "Professional Game Rules",
       "Highly Customized",
       "Easy To Install",
-      "Cross-platform Support",
+      "Cross Platform",
     ]
   },
   downloads: {
