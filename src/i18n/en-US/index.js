@@ -34,11 +34,16 @@ export default {
       "Highly Customized",
       "Easy To Install",
       "Cross Platform",
-    ]
+    ],
+    download:'Download Now',
   },
   downloads: {
-    others: 'Download now',
-    apple: 'App Store'
+    win32: '32bit-Windows Download',
+    win64: '64bit-Windows Download',
+    linux: 'Linux Download',
+    macOS: 'MacOS Download',
+    iOS: 'iOS Download',
+    android: 'Android Download',
   },
   joinNow: {
     qq: 'Join QQ Group',

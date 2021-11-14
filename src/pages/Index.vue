@@ -24,25 +24,39 @@
         </div>
       </div>
       <div class="row full-width justify-center q-pa-sm">
-          <q-btn
-            class="q-ma-xs"
-            color="green"
-            icon="cloud_download"
-            :size="joinButtonSize"
-            :label="$t('downloads.others')"
-            type="a"
-            href="http://mc.yuhao7370.top:5212/s/gvi6"
-            target="_blank"/>
-          <q-btn
-            class="q-ma-xs"
-            color="light-blue"
-            icon="fab fa-apple"
-            icon-right="open_in_new"
-            :size="joinButtonSize"
-            :label="$t('downloads.apple')"
-            type="a"
-            href="https://apps.apple.com/app/id1590869403"
-            target="_blank"/>
+        <q-btn-dropdown
+          split
+          no-caps
+          color="green"
+          dropdown-icon="mdi-dots-vertical"
+          :size="joinButtonSize"
+          :icon="mainDownloadLink.icon"
+          :label="mainDownloadLink.text"
+          type="a"
+          :href="mainDownloadLink.link"
+          target="_blank">
+          <q-list
+            v-for="(value,key) in downloadLinkList"
+            :key="key">
+            <q-item
+              clickable
+              v-close-popup
+              @click="openLink(value.link)">
+              <q-item-section avatar>
+                <q-avatar
+                  :icon="value.icon"
+                  :color="value.color"
+                  text-color="white"/>
+              </q-item-section>
+              <q-item-section>
+                <q-item-label>{{ value.text }}</q-item-label>
+              </q-item-section>
+              <q-item-section side v-if="value.extern">
+                <q-icon name="mdi-open-in-new" color="white"/>
+              </q-item-section>
+            </q-item>
+          </q-list>
+        </q-btn-dropdown>
       </div>
       <div class="row full-width justify-center q-pa-sm">
         <q-btn
@@ -69,8 +83,6 @@
 </template>
 
 <script>
-import {AuthType, createClient} from "webdav";
-
 import InterstellarTravel from "components/InterstellarTravel";
 import ResponsiveLogo from "components/ResponsiveLogo";
 
@@ -83,6 +95,51 @@ export default {
   data() {
     return {
       visible: false,
+      mainDownloadLink: {},
+      downloadLinkList: {
+        win32: {
+          link: 'https://d.flaribbit.workers.dev/Techmino_Win32.zip',
+          icon: 'mdi-microsoft-windows-classic',
+          color: 'brown',
+          extern: false,
+          text: this.$t('downloads.win32'),
+        },
+        win64: {
+          link: 'https://d.flaribbit.workers.dev/Techmino_Win64.zip',
+          icon: 'mdi-microsoft-windows',
+          color: 'blue',
+          extern: false,
+          text: this.$t('downloads.win64'),
+        },
+        linux: {
+          link: 'https://d.flaribbit.workers.dev/Techmino.AppImage',
+          icon: 'mdi-linux',
+          color: 'orange',
+          extern: false,
+          text: this.$t('downloads.linux'),
+        },
+        macOS: {
+          link: 'https://d.flaribbit.workers.dev/Techmino_macOS.dmg',
+          icon: 'mdi-apple-finder',
+          color: 'cyan',
+          extern: false,
+          text: this.$t('downloads.macOS'),
+        },
+        iOS: {
+          link: 'https://apps.apple.com/app/id1590869403',
+          icon: 'mdi-apple-ios',
+          color: 'pink',
+          extern: true,
+          text: this.$t('downloads.iOS'),
+        },
+        android: {
+          link: 'https://d.flaribbit.workers.dev/Techmino.apk',
+          icon: 'mdi-android',
+          color: 'light-green',
+          extern: false,
+          text: this.$t('downloads.android'),
+        },
+      },
     }
   },
   computed: {
@@ -104,6 +161,15 @@ export default {
         return "text-h4";
       }
     },
+    nutshellDownloadFont() {
+      if (this.$q.screen.lt.sm) {
+        return "text-h6";
+      } else if (this.$q.screen.lt.md) {
+        return "text-h4";
+      } else {
+        return "text-h3";
+      }
+    },
     joinButtonSize() {
       if (this.$q.screen.lt.sm) {
         return "sm";
@@ -114,27 +180,28 @@ export default {
       }
     }
   },
+  created() {
+    this.checkPlatform();
+  },
   methods: {
-    // async animateScroll() {
-    //   let totalDuration = 800;
-    //   let sectionCount = 10;
-    //   let ratio = this.$refs.scrollArea.getScrollPosition() / window.innerHeight;
-    //   for (let i = 0; i < sectionCount; i++) {
-    //     await this.scrollWithDelay(
-    //       ratio + (1 - ratio) * this.easeOutQuart(i / sectionCount),
-    //       totalDuration / sectionCount
-    //     );
-    //   }
-    // },
-    // easeOutQuart(x) {
-    //   return 1 - Math.pow(1 - x, 4);
-    // },
-    // async scrollWithDelay(ratio, duration) {
-    //   this.$refs.scrollArea.setScrollPosition(window.innerHeight * ratio, duration);
-    //   await new Promise((resolve) => {
-    //     setTimeout(resolve, duration);
-    //   });
-    // },
+    checkPlatform() {
+      if (this.$q.platform.is.linux) {
+        this.mainDownloadLink = this.downloadLinkList.linux;
+        delete this.downloadLinkList.linux;
+      } else if (this.$q.platform.is.mac) {
+        this.mainDownloadLink = this.downloadLinkList.macOS;
+        delete this.downloadLinkList.macOS;
+      } else if (this.$q.platform.is.ios) {
+        this.mainDownloadLink = this.downloadLinkList.iOS;
+        delete this.downloadLinkList.iOS;
+      } else if (this.$q.platform.is.android) {
+        this.mainDownloadLink = this.downloadLinkList.android;
+        delete this.downloadLinkList.android;
+      } else {
+        this.mainDownloadLink = this.downloadLinkList.win64;
+        delete this.downloadLinkList.win64;
+      }
+    },
     openLink(link) {
       window.open(link, "_blank");
     }

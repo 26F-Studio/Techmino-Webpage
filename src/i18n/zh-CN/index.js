@@ -34,11 +34,16 @@ export default {
       "自定义程度高",
       "便于安装",
       "跨平台",
-    ]
+    ],
+    download:'立刻下载',
   },
   downloads: {
-    others: '立刻下载',
-    apple: 'App Store'
+    win32: '32位Windows下载',
+    win64: '64位Windows下载',
+    linux: 'Linux下载',
+    macOS: 'MacOS下载',
+    iOS: 'iOS下载',
+    android: '安卓下载',
   },
   joinNow: {
     qq: '加入QQ群',
