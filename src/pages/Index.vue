@@ -31,7 +31,7 @@
           dropdown-icon="mdi-dots-vertical"
           :size="joinButtonSize"
           :icon="mainDownloadLink.icon"
-          :label="mainDownloadLink.text"
+          :label="$t(mainDownloadLink.text)"
           type="a"
           :href="mainDownloadLink.link"
           target="_blank">
@@ -49,7 +49,7 @@
                   text-color="white"/>
               </q-item-section>
               <q-item-section>
-                <q-item-label>{{ value.text }}</q-item-label>
+                <q-item-label>{{ $t(value.text) }}</q-item-label>
               </q-item-section>
               <q-item-section side v-if="value.extern">
                 <q-icon name="mdi-open-in-new" color="white"/>
@@ -102,42 +102,42 @@ export default {
           icon: 'mdi-microsoft-windows-classic',
           color: 'brown',
           extern: false,
-          text: this.$t('downloads.win32'),
+          text: 'downloads.win32',
         },
         win64: {
           link: 'https://d.flaribbit.workers.dev/Techmino_Win64.zip',
           icon: 'mdi-microsoft-windows',
           color: 'blue',
           extern: false,
-          text: this.$t('downloads.win64'),
+          text: 'downloads.win64',
         },
         linux: {
           link: 'https://d.flaribbit.workers.dev/Techmino.AppImage',
           icon: 'mdi-linux',
           color: 'orange',
           extern: false,
-          text: this.$t('downloads.linux'),
+          text: 'downloads.linux',
         },
         macOS: {
           link: 'https://d.flaribbit.workers.dev/Techmino_macOS.dmg',
           icon: 'mdi-apple-finder',
           color: 'cyan',
           extern: false,
-          text: this.$t('downloads.macOS'),
+          text: 'downloads.macOS',
         },
         iOS: {
           link: 'https://apps.apple.com/app/id1590869403',
           icon: 'mdi-apple-ios',
           color: 'pink',
           extern: true,
-          text: this.$t('downloads.iOS'),
+          text: 'downloads.iOS',
         },
         android: {
           link: 'https://d.flaribbit.workers.dev/Techmino.apk',
           icon: 'mdi-android',
           color: 'light-green',
           extern: false,
-          text: this.$t('downloads.android'),
+          text: 'downloads.android',
         },
       },
     }
